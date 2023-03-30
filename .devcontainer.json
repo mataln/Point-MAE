@@ -1,0 +1,7 @@
+{
+    "image": "pointmae:latest",
+    "runArgs": [
+        "--gpus",
+        "all"
+    ]
+}
