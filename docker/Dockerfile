@@ -39,3 +39,11 @@ ARG TORCH_CUDA_ARCH_LIST="Volta;Turing;Ampere"
 ENV TORCH_CUDA_ARCH_LIST="${TORCH_CUDA_ARCH_LIST}"
 
 RUN pip install -r requirements.txt
+
+WORKDIR /workspace/extensions/chamfer_dist
+RUN pip install . --user
+WORKDIR /workspace/extensions/emd
+RUN pip install . --user
+WORKDIR /workspace
+RUN pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointnet2_ops&subdirectory=pointnet2_ops_lib"
+RUN pip install --upgrade https://github.com/unlimblue/KNN_CUDA/releases/download/0.2/KNN_CUDA-0.2-py3-none-any.whl
