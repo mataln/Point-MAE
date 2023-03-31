@@ -7,3 +7,8 @@ best/
 dist/
 build/
 *.egg-info/
+
+*:Zone.Identifier
+*__pycache__*
+experiments
+*.Dockerfile.swp
