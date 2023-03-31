@@ -2,6 +2,7 @@
     "image": "pointmae:latest",
     "runArgs": [
         "--gpus",
-        "all"
+        "all",
+        "--shm-size=32g"
     ]
 }
